@@ -1,12 +1,18 @@
-@import "./utils/vars";
+@import "./utils/variables";
+@import "./utils/hidden";
 
 @import "./base/reset.scss";
 @import "./base/common";
 
 @import "./components/container";
+@import "./components/title";
+@import "./components/pre-title";
+@import "./components/btn";
+@import "./components/container";
+@import "./components/container";
 
 @import "./layout/header";
-@import "./layout/title";
+@import "./layout/backdrop";
 @import "./layout/description";
 @import "./layout/work";
 @import "./layout/clients";
