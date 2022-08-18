@@ -1,0 +1,140 @@
+.header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ececec;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+  gap: 50px;
+}
+
+.studio {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: #000000;
+  text-decoration: none;
+  margin-right: 93px;
+}
+.web {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.header-list .header-link {
+  display: block;
+  /* padding-top: 32px;
+  padding-bottom: 32px; */
+}
+
+.header-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  text-decoration: none;
+  color: var(--first-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.current {
+  color: var(--accent-color);
+  position: relative;
+}
+
+.current::after {
+  position: absolute;
+  bottom: -33px;
+  content: "";
+  height: 4px;
+  width: 100%;
+  background: currentColor;
+  border-radius: 2px;
+  display: block;
+  left: 0;
+}
+
+.header-link:hover,
+.header-link:focus {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--accent-color);
+}
+
+.icon-envolope {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.icon-tel {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.header-mail,
+.header-tel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  text-decoration: none;
+  color: var(--second-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-mail:hover,
+.header-tel:hover {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.header-mail:focus,
+.header-tel:focus {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--accent-color);
+}
+
+.header-connect {
+  margin-left: auto;
+  align-items: center;
+  display: flex;
+  gap: 50px;
+}
+
+.header-connect-list {
+  display: flex;
+  gap: 30px;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  color: currentColor;
+}
+
+.header-connect-item {
+  display: flex;
+}

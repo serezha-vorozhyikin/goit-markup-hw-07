@@ -1,0 +1,15 @@
+@import "./utils/vars";
+
+@import "./base/reset.scss";
+@import "./base/common";
+
+@import "./components/container";
+
+@import "./layout/header";
+@import "./layout/title";
+@import "./layout/description";
+@import "./layout/work";
+@import "./layout/clients";
+@import "./layout/team";
+@import "./layout/portfolio";
+@import "./layout/hero";
