@@ -2,22 +2,19 @@
   background: #f5f4fa;
 }
 
-.team-list {
+.card__list {
   display: flex;
   gap: 30px;
 }
 
-.team-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+.team__title {
+  @include font(700, 36px, 1.16, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--first-text-color);
   margin-bottom: 50px;
 }
 
-.team-item {
+.card__item {
   min-width: 270px;
   min-height: 368px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -26,36 +23,29 @@
   background: #ffffff;
 }
 
-.team-person-job {
+.card__person-job {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.team-person {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.18;
+.card__person {
+  @include font(500, 16px, 1.18, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--first-text-color);
   margin-bottom: 10px;
 }
-.team-job-title {
-  font-size: 16px;
-  line-height: 1.18;
+.card__job-title {
+  @include font(null, 16px, 1.18, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--second-text-color);
   margin-bottom: 16px;
 }
 
-.team-social {
+.socials {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-.team-social-link {
+.social__link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -66,27 +56,32 @@
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    background-color: var(--accent-color);
+  }
+
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 
-.team-social-icon {
+.social__icon {
   fill: #afb1b8;
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  .social__link:hover & {
+    fill: #ffffff;
+  }
+  .social__link:focus & {
+    fill: #ffffff;
+  }
 }
 
-.team-social-link:hover {
-  background-color: var(--accent-color);
+.card__person--color-dark {
+  color: var(--first-text-color);
 }
 
-.team-social-link:hover .team-social-icon {
-  fill: #ffffff;
-}
-
-.team-social-link:focus {
-  background-color: var(--accent-color);
-}
-
-.team-social-link:focus .team-social-icon {
-  fill: #ffffff;
+.card__job-title--color-grey {
+  color: var(--second-text-color);
 }

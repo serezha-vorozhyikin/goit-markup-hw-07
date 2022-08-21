@@ -1,5 +1,6 @@
 @import "./utils/variables";
 @import "./utils/hidden";
+@import "./utils/mixins";
 
 @import "./base/reset.scss";
 @import "./base/common";
@@ -17,5 +18,5 @@
 @import "./layout/work";
 @import "./layout/clients";
 @import "./layout/team";
-@import "./layout/portfolio";
+@import "./layout/footer";
 @import "./layout/hero";

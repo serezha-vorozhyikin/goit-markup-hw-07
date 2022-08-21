@@ -16,10 +16,7 @@
 }
 .footer-studio {
   font-family: "Raleway";
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.9;
-  letter-spacing: 0.03em;
+  @include font(700, 26px, 1.9, 0.03em);
   color: #ffffff;
   text-decoration: none;
 }
@@ -29,35 +26,26 @@
 }
 
 .footer-address-title {
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
+  @include font(null, 14px, 1.7, 0.03em);
   color: #ffffff;
   text-decoration: none;
 }
 .footer-mail {
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
+  @include font(null, 14px, 1.7, 0.03em);
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   margin-top: 9px;
   margin-bottom: 9px;
 }
 .footer-tel {
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
+  @include font(null, 14px, 1.7, 0.03em);
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
 
 .box-join {
   margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include font(700, 14px, 1.14, 0.03em);
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -80,6 +68,10 @@
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 
 .footer-box {
@@ -89,16 +81,10 @@
 
 .footer-icon {
   fill: currentColor;
-}
-
-.footer-social-link:hover,
-.footer-social-link:focus {
-  background-color: var(--accent-color);
-}
-
-.footer-social-link:hover,
-.footer-social-link:focus .footer-icon {
-  fill: currentColor;
+  .footer-social-link:hover,
+  .footer-social-link:focus & {
+    fill: currentColor;
+  }
 }
 
 .footer-box-subscribe {
@@ -108,10 +94,7 @@
 }
 
 .label-subscribe {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include font(700, 14px, 1.14, 0.03em);
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
@@ -126,16 +109,17 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: #2f303a;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
+  @include font(null, 16px, 1.25, 0.03em);
   outline: none;
   align-items: center;
-  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+  }
 }
 
 .subscribe-wrap {
@@ -143,15 +127,8 @@
   position: relative;
 }
 
-.input-email:focus {
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
-}
-
 .btn-subscribe {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.8;
+  @include font(700, 16px, 1.8, 0.06em);
   margin-left: 12px;
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -161,7 +138,6 @@
   display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: 0.06em;
   padding: 10px 62px 10px 29px;
   border: none;
   cursor: pointer;

@@ -27,18 +27,13 @@
 }
 
 .description-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include font(700, 14px, 1.14, 0.03em);
   text-transform: uppercase;
   color: var(--first-text-color);
   margin-bottom: 10px;
 }
 .description-after-title {
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
+  @include font(null, 14px, 1.7, 0.03em);
   color: var(--second-text-color);
   max-width: 270px;
   max-height: 75px;

@@ -1,9 +1,6 @@
 .client-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  @include font(700, 36px, 1.16, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--first-text-color);
   margin-bottom: 50px;
 }
@@ -25,26 +22,16 @@
   transition-property: color, border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.client-social-link:hover {
-  color: var(--accent-color);
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
-}
-
-.client-social-link:focus {
-  color: var(--accent-color);
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
-}
-
-.client-social-link:hover .client-icon {
-  fill: var(--accent-color);
-}
-
-.client-social-link:focus .client-icon {
-  fill: var(--accent-color);
+  &:hover {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+  }
+  &:focus {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+  }
 }
 
 .clients-item {
@@ -53,10 +40,9 @@
   align-items: center;
   width: 170px;
   height: 92px;
-}
-
-.clients-item:hover {
-  color: var(--accent-color);
+  &:hover {
+    color: var(--accent-color);
+  }
 }
 
 .client-icon {
@@ -67,4 +53,11 @@
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  .client-social-link:hover & {
+    fill: var(--accent-color);
+  }
+
+  .client-social-link:focus & {
+    fill: var(--accent-color);
+  }
 }
